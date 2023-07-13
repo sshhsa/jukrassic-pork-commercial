@@ -1,0 +1,134 @@
+.header_menu {
+  display: flex;
+  &.mobile {
+    display: flex;
+  }
+  &.desktop {
+    display: none;
+  }
+  @media screen and (min-width: 1440px) {
+    align-items: flex-end;
+    position: fixed;
+    // top: 696px;
+    bottom: 24px;
+    z-index: 100;
+    // margin-left: -432px;
+    &.mobile {
+      display: none;
+    }
+    &.desktop {
+      display: flex;
+      width: 408px;
+      height: 516px;
+      overflow: hidden;
+    }
+  }
+}
+
+.logo {
+  display: none;
+  @media screen and (min-width: 1440px) {
+    width: 60px;
+    height: 60px;
+    background-color: var(--neutral-dark-bckg-clr-3);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.link {
+  height: 48px;
+  width: 100%;
+  margin: 32px 0;
+  padding: 10px auto;
+  border: none;
+  background: var(--light-text-clr);
+  color: var(--neutral-dark-bckg-clr-1);
+  font-size: 22px;
+  font-family: Mulish;
+  font-weight: 600;
+  line-height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+
+  p {
+    white-space: nowrap;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 52px;
+    padding: 16px 30px;
+    height: 60px;
+    width: 268px;
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 288px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.modalComponentDisplay {
+  display: none;
+
+  @media screen and (min-width: 1440px) {
+    display: block;
+  }
+}
+
+.burger_btn {
+  display: none;
+  @media screen and (min-width: 1440px) {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: none;
+    width: 60px;
+    height: 60px;
+    background-color: var(--neutral-dark-bckg-clr-3);
+    cursor: pointer;
+  }
+}
+
+// .modalOpen {
+//   overflow: hidden;
+// }
+
+.icon {
+  transition: opacity 0.3s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1s ease;
+}
+
+.fade-out {
+  animation: fade-out 1s ease;
+}

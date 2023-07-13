@@ -1,0 +1,75 @@
+.arrows_container {
+  margin-bottom: 8px;
+  width: 88px;
+  height: 40px;
+  margin-right: 0;
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 12px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-right: 84px;
+    margin-bottom: 16px;
+  }
+}
+
+.member {
+  width: auto;
+  flex-shrink: 0;
+  display: flex;
+  height: 100%;
+  max-height: 100%;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  &_photo {
+    width: 343px;
+    height: 264px;
+    object-fit: cover;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: 522px;
+      height: 412px;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 732px;
+      height: 516px;
+    }
+  }
+}
+
+.arrowNavigationLeft,
+.arrowNavigationRight {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  &.defaultBandPosition {
+    padding: 8px;
+    border: 1px solid var(--main-accent-text-clr);
+    background-color: transparent;
+    color: var(--main-accent-text-clr);
+
+    &:hover {
+      cursor: pointer;
+      @media screen and (min-width: 1440px) {
+        border: 1px solid var(--main-accent-text-clr);
+        background-color: var(--main-accent-text-clr);
+      }
+    }
+  }
+}
+
+.arrow {
+  display: block;
+  fill: var(--main-accent-text-clr);
+}
+.defaultBandPosition:hover .arrow {
+  @media screen and (min-width: 1440px) {
+    fill: var(--neutral-dark-bckg-clr-1);
+  }
+}

@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/Oswald-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('../fonts/Mulish-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('../fonts/Mulish-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('../fonts/Mulish-SemiBold.ttf');
+}
+
+:root {
+  --main-text-clr: #dadada;
+  --main-bckg-clr: #23291c;
+  --main-accent-text-clr: #00fe00;
+  --main-error-text-clr: #ba1a1a;
+
+  --secondary-bg-clr: #23291c;
+
+  --neutral-dark-bckg-clr-1: #131313;
+  --neutral-dark-bckg-clr-2: #232323;
+  --neutral-dark-bckg-clr-3: #363636;
+
+  --neutral-dark-text-clr: #878787;
+  --white-text-clr: #dadada;
+  --light-text-clr: #c1c1c1;
+
+  --add-light-text-clr-1: #ffffff;
+  --add-light-text-clr-2: #fefefe;
+
+  --default-animation: 400ms ease-in-out;
+  --fast-animation: 250ms ease-in-out;
+  --slow-animation: 600ms ease-in-out;
+
+  --swiper-pagination-color: #00fe00;
+  --swiper-pagination-progressbar-size: 2px;
+
+  --main-logo-bckg-clr: #4f5449;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Mulish-SemiBold';
+  background-color: var(--neutral-dark-bckg-clr-1);
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 100%;
+
+  /* mobile screen */
+  @media screen and (min-width: 375px) {
+    width: 375px;
+  }
+
+  /* tablet screen */
+  @media screen and (min-width: 768px) {
+    padding-right: 32px;
+    padding-left: 32px;
+    width: 768px;
+  }
+
+  /* desktop screen */
+  @media screen and (min-width: 1440px) {
+    padding-right: 84px;
+    padding-left: 84px;
+    width: 1440px;
+  }
+}
+
+.no_scroll {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}

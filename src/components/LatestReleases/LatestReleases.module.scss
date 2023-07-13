@@ -1,0 +1,20 @@
+.latestReleases {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  color: var(--add-light-text-clr-2);
+  background-color: var(--neutral-dark-bckg-clr-1);
+
+  @media screen and (min-width: 768px) {
+    padding-top: 24px;
+    padding-bottom: 160px;
+  }
+}
+
+.boxButtonPlayers {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+}

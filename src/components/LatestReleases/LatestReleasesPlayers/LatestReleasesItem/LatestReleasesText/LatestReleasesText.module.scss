@@ -1,0 +1,19 @@
+.textPlayer {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 24px;
+  font-family: 'Mulish';
+  font-weight: 700;
+  line-height: 1.16;
+
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 3;
+}
+
+.hiddenText {
+  display: none;
+}

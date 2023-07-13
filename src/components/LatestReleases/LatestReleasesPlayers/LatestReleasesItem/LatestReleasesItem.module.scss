@@ -1,0 +1,110 @@
+.playerBox {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+
+  @media screen and (min-width: 375px) {
+    width: 343px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 408px;
+  }
+}
+
+.commonMusicWrapper {
+  height: 100%;
+  width: 100%;
+  & > div {
+    height: 252px !important;
+
+    @media screen and (min-width: 1440px) {
+      height: 300px !important;
+    }
+  }
+}
+
+.imageMusic {
+  position: relative;
+  z-index: 2;
+
+  &::after {
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(19, 19, 19, 0.7);
+    transition: background-color var(--default-animation);
+    z-index: 50;
+    pointer-events: none;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+  }
+}
+
+.imageMusic:hover .iconPlayRelease {
+  fill: var(--main-accent-text-clr);
+}
+
+.videoSlider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  z-index: 10;
+  transform-origin: left;
+  transform: scaleX(0.07);
+
+  background-color: var(--main-accent-text-clr);
+  transition: transform var(--default-animation);
+}
+
+.playerBox:hover .videoSlider,
+.playerBox:focus .videoSlider {
+  transform: scaleX(1);
+}
+
+.darknedBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--neutral-dark-bckg-clr-2);
+}
+
+// Styles for icon-play
+
+.iconContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.iconPlay {
+  display: block;
+  width: 64px;
+  height: 64px;
+  fill: var(--main-text-clr);
+  transition: fill var(--default-animation);
+
+  @media screen and (max-width: 768px) {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.imageMusic:hover .iconPlay {
+  fill: var(--main-accent-text-clr);
+}
