@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { ReactComponent as DownloadIcon } from '../../../images/Music/svg/Icon-download.svg';
 import scss from './ButtonShowMoreMusic.module.scss';
 
-function ButtonShowMoreMusic({ valueShowMoreMusic, onClick }) {
+const ButtonShowMoreMusic = ({ valueShowMoreMusic, onClick }) => {
   return (
     <div className={scss.boxShowMore}>
       <button className={scss.showMore} onClick={onClick}>
@@ -11,7 +11,7 @@ function ButtonShowMoreMusic({ valueShowMoreMusic, onClick }) {
       </button>
     </div>
   );
-}
+};
 
 ButtonShowMoreMusic.propTypes = {
   valueShowMoreMusic: PropTypes.string.isRequired,

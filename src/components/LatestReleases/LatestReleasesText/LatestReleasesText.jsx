@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import scss from './LatestReleasesText.module.scss';
 
-function LatestReleasesText({ description }) {
+const LatestReleasesText = ({ description }) => {
   const { t } = useTranslation();
 
   return (
@@ -14,7 +14,7 @@ function LatestReleasesText({ description }) {
       </p>
     </div>
   );
-}
+};
 
 LatestReleasesText.propTypes = {
   description: PropTypes.string.isRequired,

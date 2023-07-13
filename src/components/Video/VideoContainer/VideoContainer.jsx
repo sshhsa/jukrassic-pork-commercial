@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import VideoBlock from '../VideoBlock/VideoBlock';
 import scss from './VideoContainer.module.scss';
 
-function VideoContainer({ data, language }) {
+const VideoContainer = ({ data, language }) => {
   const [activeVideo, setActiveVideo] = useState(null);
 
   const track = (data && data.videoLinksList) || [
@@ -34,7 +34,7 @@ function VideoContainer({ data, language }) {
       ))}
     </div>
   );
-}
+};
 
 export default VideoContainer;
 

@@ -4,13 +4,14 @@ import { useTranslation } from 'react-i18next';
 
 import Item from './Item/Item';
 import ModalForm from './ModalForm/ModalForm';
+
 import { ReactComponent as Logo } from '../../images/Logotype.svg';
 import { ReactComponent as Envelop } from '../../images/Footer/envelop.svg';
 import { LanguageContext } from 'utils/LanguageContext';
 
 import scss from './Footer.module.scss';
 
-const Footer = () => {
+function Footer() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const { currentLanguage } = useContext(LanguageContext);
@@ -124,6 +125,6 @@ const Footer = () => {
       )}
     </>
   );
-};
+}
 
 export default Footer;

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import btnYoutube from 'images/sprite.svg';
 import scss from './VideoBlock.module.scss';
 
-function VideoBlock({ src, title, isActive, onClick }) {
+const VideoBlock = ({ src, title, isActive, onClick }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isCover, setIsCover] = useState(true);
 
@@ -61,7 +61,7 @@ function VideoBlock({ src, title, isActive, onClick }) {
       <h3 className={scss.videoBlock_track_title}>{title}</h3>
     </div>
   );
-}
+};
 
 export default VideoBlock;
 

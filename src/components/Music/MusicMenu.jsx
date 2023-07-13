@@ -1,27 +1,22 @@
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
+
 import { ReactComponent as Logo } from '../../images/Logo.svg';
 import { ReactComponent as Burger } from '../../images/burger_menu.svg';
 import { ReactComponent as CloseBtn } from '../../images/close_modal.svg';
+
 import ModalComponent from '../Modal/Modal';
 import useModal from 'hooks/useModal';
 import BackButton from '../CommonButton/BackButton';
+
 import scss from './MusicMenu.module.scss';
 
-// const handleScrollToTop = () => {
-//   window.scrollTo({
-//     top: 0,
-//     behavior: 'smooth',
-//   });
-// };
-
-function MusicMenu({ page, text, isMobile }) {
+const MusicMenu = ({ page, text, isMobile }) => {
   const { isModalOpen, setIsModalOpen } = useModal({ styles: scss.modalOpen });
   const modalRef = useRef(null);
   const { t } = useTranslation();
-    const navigate = useNavigate();
-
+  const navigate = useNavigate();
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -84,6 +79,6 @@ function MusicMenu({ page, text, isMobile }) {
       </button>
     </div>
   );
-}
+};
 
 export default MusicMenu;

@@ -17,7 +17,7 @@ import ButtonModalCopy from '../ModalMusic/ButtonModalCopy/ButtonModalCopy';
 
 import scss from './ListMusicItem.module.scss';
 
-function ListMusicItem({ itemMusic }) {
+const ListMusicItem = ({ itemMusic }) => {
   const [showModal, setShowModal] = useState(false);
 
   const toggleModalMusic = () => {
@@ -87,7 +87,7 @@ function ListMusicItem({ itemMusic }) {
       )}
     </>
   );
-}
+};
 
 ListMusicItem.propTypes = {
   itemMusic: PropTypes.object.isRequired,

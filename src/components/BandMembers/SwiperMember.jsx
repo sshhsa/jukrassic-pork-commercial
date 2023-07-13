@@ -7,17 +7,16 @@ import SwiperCore, {
 } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { LanguageContext } from 'utils/LanguageContext';
-//swiper styles
+
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import 'swiper/scss/effect-fade';
 import 'swiper/scss/autoplay';
-//icons
+
 import { ReactComponent as ArrowPrev } from '../../images/arrow_back.svg';
 import { ReactComponent as ArrowNext } from '../../images/arrow_forward.svg';
-//styles
-import s from './BandMembers.module.scss';
+import scss from './BandMembers.module.scss';
 
 SwiperCore.use([Navigation, EffectFade, Pagination, Autoplay]);
 
@@ -44,29 +43,32 @@ const SwiperMember = ({ data }) => {
     speed: 1000,
   };
   return (
-    <div className={s.containerSwiper}>
-      <Swiper {...carouselSettings} className={s.list}>
+    <div className={scss.containerSwiper}>
+      <Swiper {...carouselSettings} className={scss.list}>
         {data &&
           data.bandList.map(member => (
             <SwiperSlide key={member.name.en}>
-              <div className={s.member}>
+              <div className={scss.member}>
                 <img
                   src={member.bandImage}
                   alt={member.name[currentLanguage]}
                   srcSet={member.bandImage}
-                  className={s.member_photo}
+                  className={scss.member_photo}
                 />
-                <div className={s.member_info}>
-                  <h3 className={s.member_name}>
+                <div className={scss.member_info}>
+                  <h3 className={scss.member_name}>
                     {member.name[currentLanguage]}
                   </h3>
-                  <p className={s.member_position}>
+                  <p className={scss.member_position}>
                     {member.specialization[currentLanguage]}
                   </p>
-                  <ul className={s.member_description}>
+                  <ul className={scss.member_description}>
                     {member.descriptionList.map(item => {
                       return (
-                        <li key={item.id} className={s.member_description_item}>
+                        <li
+                          key={item.id}
+                          className={scss.member_description_item}
+                        >
                           {item.description[currentLanguage]}
                         </li>
                       );
@@ -77,24 +79,23 @@ const SwiperMember = ({ data }) => {
             </SwiperSlide>
           ))}
       </Swiper>
-      {/* Add Navigation */}
-      <div className={s.swiperNav}>
-        <div className={s.swiperBtns}>
+
+      <div className={scss.swiperNav}>
+        <div className={scss.swiperBtns}>
           <div
-            className={`swiper-prev-button ${s.arrowNavigationLeft} ${s.defaultBandPosition}`}
+            className={`swiper-prev-button ${scss.arrowNavigationLeft} ${scss.defaultBandPosition}`}
           >
-            <ArrowPrev className={s.arrow} />
+            <ArrowPrev className={scss.arrow} />
           </div>
           <div
-            className={`swiper-next-button ${s.arrowNavigationRight} ${s.defaultBandPosition}`}
+            className={`swiper-next-button ${scss.arrowNavigationRight} ${scss.defaultBandPosition}`}
           >
-            <ArrowNext className={s.arrow} />
+            <ArrowNext className={scss.arrow} />
           </div>
         </div>
 
-        {/* Add ProgressBar */}
         <div
-          className={`swiper-progressbar-band  ${s.swiperProgressbarBand}`}
+          className={`swiper-progressbar-band  ${scss.swiperProgressbarBand}`}
         />
       </div>
     </div>

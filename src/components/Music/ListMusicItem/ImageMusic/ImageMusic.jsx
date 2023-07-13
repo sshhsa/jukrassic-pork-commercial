@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import MusicIconPlay from './MusicIconPlay/MusicIconPlay';
 import scss from './ImageMusic.module.scss';
 
-function ImageMusic({ songImage, songLink }) {
+const ImageMusic = ({ songImage, songLink }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlay = () => {
@@ -26,7 +26,7 @@ function ImageMusic({ songImage, songLink }) {
       />
     </div>
   );
-}
+};
 
 ImageMusic.propTypes = {
   songImage: PropTypes.object.isRequired,

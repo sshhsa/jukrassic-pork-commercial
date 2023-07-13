@@ -6,7 +6,7 @@ import scss from './ModalMusic.module.scss';
 
 const modalWindow = document.querySelector('#modal-music');
 
-function ModalMusic({ onCloseModal, modalContent }) {
+const ModalMusic = ({ onCloseModal, modalContent }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -69,6 +69,6 @@ function ModalMusic({ onCloseModal, modalContent }) {
     ),
     modalWindow
   );
-}
+};
 
 export default ModalMusic;

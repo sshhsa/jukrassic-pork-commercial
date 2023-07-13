@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { ReactComponent as RightIcon } from '../../../images/Common/svg/Right-Icon.svg';
 import scss from './ButtonNotFound.module.scss';
 
-function ButtonNotFound({ valueButtonNotFound }) {
+const ButtonNotFound = ({ valueButtonNotFound }) => {
   return (
     <NavLink to="/#header" className={scss.buttonNotFound}>
       <RightIcon className={scss.commonIcon} />
@@ -12,7 +12,7 @@ function ButtonNotFound({ valueButtonNotFound }) {
       <RightIcon className={scss.commonIconVisible} />
     </NavLink>
   );
-}
+};
 
 ButtonNotFound.propTypes = {
   valueButtonNotFound: PropTypes.string.isRequired,

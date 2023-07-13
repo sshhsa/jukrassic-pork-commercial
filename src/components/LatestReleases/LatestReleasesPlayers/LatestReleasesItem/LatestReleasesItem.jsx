@@ -8,7 +8,7 @@ import LatestReleasesVideoSlider from './LatestReleasesVideoSlider/LatestRelease
 
 import scss from './LatestReleasesItem.module.scss';
 
-function LatestReleaesItem({ songImage, songLink, videoText }) {
+const LatestReleaesItem = ({ songImage, songLink, videoText }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlay = () => {
@@ -35,7 +35,7 @@ function LatestReleaesItem({ songImage, songLink, videoText }) {
       <LatestReleasesVideoSlider isPlaying={isPlaying} />
     </li>
   );
-}
+};
 
 LatestReleaesItem.propTypes = {
   videoText: PropTypes.string.isRequired,

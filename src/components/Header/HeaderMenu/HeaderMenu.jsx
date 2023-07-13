@@ -15,7 +15,7 @@ const handleScrollToTop = () => {
   });
 };
 
-function HeaderMenu({ isMobile }) {
+const HeaderMenu = ({ isMobile }) => {
   const { isModalOpen, setIsModalOpen } = useModal({ styles: scss.modalOpen });
   const modalRef = useRef(null);
   const { t } = useTranslation();
@@ -77,6 +77,6 @@ function HeaderMenu({ isMobile }) {
       )}
     </div>
   );
-}
+};
 
 export default HeaderMenu;

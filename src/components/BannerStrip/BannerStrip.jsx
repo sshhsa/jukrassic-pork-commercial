@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 import icon from '../../images/Vector.svg';
 import scss from './BannerStrip.module.scss';
 
-const BannerStrip = () => {
-    const { t } = useTranslation();
+function BannerStrip() {
+  const { t } = useTranslation();
 
   const textItems = [{ text: 'jukrassic pork' }, { text: t('bannerstrip') }];
 
@@ -29,6 +29,6 @@ const BannerStrip = () => {
       </div>
     </>
   );
-};
+}
 
 export default BannerStrip;

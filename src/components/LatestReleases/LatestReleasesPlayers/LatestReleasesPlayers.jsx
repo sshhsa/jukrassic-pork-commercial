@@ -4,7 +4,7 @@ import { LanguageContext } from 'utils/LanguageContext';
 import LatestReleaesItem from './LatestReleasesItem/LatestReleasesItem';
 import scss from './LatestReleasesPlayers.module.scss';
 
-function LatestReleasesPlayers({ latestReleasesList }) {
+const LatestReleasesPlayers = ({ latestReleasesList }) => {
   const { currentLanguage } = useContext(LanguageContext);
 
   return (
@@ -21,6 +21,6 @@ function LatestReleasesPlayers({ latestReleasesList }) {
         ))}
     </ul>
   );
-}
+};
 
 export default LatestReleasesPlayers;

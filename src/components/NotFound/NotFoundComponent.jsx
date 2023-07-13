@@ -1,8 +1,10 @@
 import { useTranslation } from 'react-i18next';
+
 import LabelNotFound from './LabelNotFound/LabelNotFound';
 import ImagesNotFound from './ImagesNotFound/ImagesNotFound';
 import TextNotFound from './TextNotFound/TextNotFound';
 import ButtonNotFound from './ButtonNotFound/ButtonNotFound';
+
 import scss from './NotFoundComponent.module.scss';
 
 function NotFoundComponent() {
